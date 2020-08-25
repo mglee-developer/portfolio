@@ -337,3 +337,20 @@ p {
     padding: 2px 4px;
     margin: 4px;
 }
+
+/* Contact */
+#contact {
+    background-color: var(--color-light-blue);
+}
+.contact__links {
+    margin: 20px;
+}
+.contact__links a {
+    margin: 8px;
+    color: var(--color-black);
+    font-size: var(--font-large);
+}
+.contact__rights {
+    font-size: var(--font-small);
+    font-weight: var(--weight-regular);
+}
