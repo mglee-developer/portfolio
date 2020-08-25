@@ -208,3 +208,52 @@ p {
     color: var(--color-dark-grey);
     font-size: var(--font-micro);
 }
+
+/* SKills */
+#skills {
+    background-color: var(--color-light-yellow);
+}
+.skillset {
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-white);
+    margin: 20px 0;
+}
+.skillset__title {
+    color: var(--color-white);
+}
+.skillset__left {
+    flex-basis: 60%;
+    background-color: var(--color-black);
+    padding: 20px 40px;
+}
+.skill__description {
+    display: flex;
+    justify-content: space-between;
+}
+.skill {
+    margin-bottom: 32px;
+}
+.skill__bar, .skill__value {
+    border-radius: var(--border-radius-size);
+}
+.skill__bar {
+    width: 100%;
+    margin: auto;
+    border: 2px solid var(--color-dark-grey);
+}
+.skill__bar .skill__value {
+    border: 2px solid var(--color-yellow);
+}
+.skillset__right {
+    flex-basis: 40%;
+}
+.tools, .etc {
+    padding: 20px;
+}
+.tools {
+    background-color: var(--color-dark-grey);
+}
+.etc {
+    background-color: var(--color-grey);
+}
