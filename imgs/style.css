@@ -120,3 +120,25 @@ p {
     background-color: var(--color-blue);
     color: var(--color-white);
 }
+
+/* Home */
+#home {
+    text-align: center;
+    background: center/cover no-repeat url('/imgs/background.png');
+    padding: 40px;
+}
+.home__profile {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-dark-grey);
+}
+.home__contact {
+    color: var(--color-dark-grey);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    padding: 8px 12px;
+    margin: 16px 0 24px;
+    border: 2px solid var(--color-dark-grey);
+    border-radius: var(--border-radius-size);
+}
