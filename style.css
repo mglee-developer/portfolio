@@ -91,7 +91,7 @@ p {
 
 /* Navbar */
 #navbar {
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     left: 0;
     display: flex;
@@ -119,6 +119,13 @@ p {
 .navbar__menu--item:hover {
     background-color: var(--color-blue);
     color: var(--color-white);
+}
+.navbar__toggle-btn {
+    position: absolute;
+    top: 38px;
+    right: 32px;
+    font-size: 24px;
+    display: none;
 }
 
 /* Home */
@@ -163,6 +170,7 @@ p {
 .stack__icon {
     width: 170px;
     height: 170px;
+    margin: auto;
     font-size: 70px;
     line-height: 170px;
     color: var(--color-blue);
@@ -362,4 +370,35 @@ p {
 .contact__rights {
     font-size: var(--font-small);
     font-weight: var(--weight-regular);
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+    .navbar__toggle-btn {
+        display: block;
+    }
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar__menu {
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+    .navbar__menu ul {
+        flex-direction: column;
+    }
+    .about__stack {
+        flex-direction: column;
+    }
+    .stack {
+        margin-bottom: 38px;
+    }
+    .skillset {
+        flex-direction: column;
+    }
+    .project {
+        flex-grow: 1;
+    }
 }
