@@ -69,7 +69,7 @@ h1 {
 }
 
 h2 {
-    font-size: var(--font-regular);
+    font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
     color: var(--color-black);
     margin: 8px 0;
@@ -342,13 +342,22 @@ p {
 #contact {
     background-color: var(--color-light-blue);
 }
+.contact__title {
+    margin: 32px 0;
+}
 .contact__links {
-    margin: 20px;
+    font-size: var(--font-large);
+    margin: 24px 0;
 }
 .contact__links a {
-    margin: 8px;
     color: var(--color-black);
-    font-size: var(--font-large);
+}
+.contact__links i {
+    transition: all var(--animation-duration) ease-in;
+}
+.contact__links i:hover{
+    transform: scale(1.1);
+    color: var(--color-blue);
 }
 .contact__rights {
     font-size: var(--font-small);
