@@ -91,14 +91,18 @@ p {
 
 /* Navbar */
 #navbar {
-    /* position: sticky; */
-    top: 0;
-    left: 0;
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;;
-    background-color: var(--color-light-blue);
+    align-items: center;
+    background-color: transparent;
     padding: 16px;
+    transition: all var(--animation-duration) ease-in-out;
+}
+#navbar.navbar--dark {
+    background-color: var(--color-light-blue);
+    padding: 8px;
 }
 .navbar__logo img {
     width: 70px;
@@ -132,7 +136,7 @@ p {
 #home {
     text-align: center;
     background: center/cover no-repeat url('/imgs/background.png');
-    padding: 40px;
+    padding: 120px 40px 40px;
 }
 .home__profile {
     width: 250px;
@@ -329,11 +333,11 @@ p {
     justify-content: center;
     opacity: 0;
     transition: all var(--animation-duration) ease-in;
-    transform: translateY(10px);
+    transform: rotateY(180deg);
 }
 .project:hover .project__description {
     opacity: 0.8;
-    transform: translateY(0px);
+    transform: rotateY(0);
 }
 .project__description h3,
 .project__description p {
