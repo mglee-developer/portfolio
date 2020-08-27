@@ -198,12 +198,12 @@
             <h1>My Work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
-                <button class="category__btn active">ALL<span class="category__count">3</span></button>
-                <button class="category__btn">Front-end<span class="category__count">2</span></button>
-                <button class="category__btn">Back-end<span class="category__count">1</span></button>
+                <button class="category__btn active" data-filter="*">ALL<span class="category__count">3</span></button>
+                <button class="category__btn" data-filter="front-end">Front-end<span class="category__count">2</span></button>
+                <button class="category__btn" data-filter="back-end">Back-end<span class="category__count">1</span></button>
             </div>
             <div class="work__projects">
-                <a href="" class="project">
+                <a href="" class="project" target="blank" data-type="front-end">
                     <img src="/imgs/projects/myportfolio.png" alt="project" class="project__image">
                     <div class="project__description">
                         <h3>My portfolio</h3>
@@ -214,7 +214,7 @@
                         </p>
                     </div>
                 </a>
-                <a href="" class="project">
+                <a href="" class="project" target="blank" data-type="front-end">
                     <img src="/imgs/projects/myportfolio.png" alt="" class="project__image">
                     <div class="project__description">
                         <h3>My portfolio</h3>
@@ -225,7 +225,7 @@
                         </p>
                     </div>
                 </a>
-                <a href="" class="project">
+                <a href="" class="project" target="blank" data-type="back-end">
                     <img src="/imgs/projects/myportfolio.png" alt="" class="project__image">
                     <div class="project__description">
                         <h3>My portfolio</h3>
@@ -253,7 +253,6 @@
         </div>
         <p class="contact__rights">2020 Dveloper Ming · All rights reserved</p>
     </section>
-
     <!-- Arrow Up -->
     <button class="arrow-up">
         <i class="fas fa-arrow-circle-up"></i>
