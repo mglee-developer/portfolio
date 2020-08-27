@@ -97,7 +97,7 @@ p {
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    padding: 16px;
+    padding: 8px;
     transition: all var(--animation-duration) ease-in-out;
     z-index: 1;
 }
@@ -128,7 +128,7 @@ p {
 .navbar__toggle-btn {
     position: absolute;
     top: 28px;
-    right: 32px;
+    right: 20px;
     font-size: 24px;
     display: none;
 }
@@ -154,11 +154,15 @@ p {
     border: 2px solid var(--color-dark-grey);
     border-radius: var(--border-radius-size);
 }
+.home__contact:hover {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
 
 /* Section Common */
 .section {
     text-align: center;
-    padding: 50px;
+    padding: 60px 50px 50px;
     margin: auto;
 }
 .section__container {
@@ -276,9 +280,10 @@ p {
     margin: 32px;
 }
 .category__btn {
+    position: relative;
     border: 1px solid var(--color-light-grey);
     border-radius: var(--border-radius-size);
-    padding: 8px 32px;
+    padding: 8px 48px;
     font-size: var(--font-regular);
     font-weight: var(--weight-semi-bold);
 }
@@ -290,16 +295,16 @@ p {
 .category__btn.active .category__count,
 .category__btn:hover .category__count {
     opacity: 1;
-    top: 0;
+    top: 4px;
 }
 .category__count {
     background-color: var(--color-yellow);
     border-radius: 50%;
-    margin-left: 10px;
+    margin-left: 4px;
     padding: 4px 8px;
-    position: relative;
-    top: -20px;
-    left: 4px;
+    position: absolute;
+    top: -25px;
+    right: 16px;
     opacity: 0;
     transition: all var(--animation-duration) ease-in;
 }
@@ -407,6 +412,14 @@ p {
 
 /* responsive */
 @media screen and (max-width: 768px) {
+    :root {
+        /* Font size */
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    }
     .navbar__toggle-btn {
         display: block;
     }
@@ -425,17 +438,35 @@ p {
     }
     .navbar__menu ul {
         flex-direction: column;
+        margin-top: 0px;
+    }
+    .section {
+        padding: 60px 16px 16px;
     }
     .about__stack {
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
     .stack {
-        margin-bottom: 38px;
+        margin-bottom: 30px;
+    }
+    .education__description, 
+    .career__description {
+        margin: 0 15px;
+    }
+    .category__btn {
+        margin: 4px 0;
+        width: 100%;
     }
     .skillset {
         flex-direction: column;
     }
     .project {
         flex-grow: 1;
+    }
+    .arrow-up {
+        bottom: 16px;
+        right: 16px;
     }
 }
