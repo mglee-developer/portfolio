@@ -2,7 +2,6 @@
 
 // navbar가 top에 있으면 투명, 아니면 light-blue
 const navbar = document.querySelector('#navbar');
-// const bodyContainer = document.querySelector('.body__container');
 const nabvarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     if(window.scrollY > nabvarHeight) {
@@ -10,15 +9,11 @@ document.addEventListener('scroll', () => {
     }else {
         navbar.classList.remove('navbar--dark');
     }
-
-    // if(window.scrollY > 0) {
-    //     const arrowBtn = crateArrowBtn();
-    //     bodyContainer.appendChild(arrowBtn);
-    // }
 });
 
 // when we click menu, scrolling
 const navbarMenu = document.querySelector('.navbar__menu');
+const items = document.querySelectorAll('.navbar__menu--item');
 navbarMenu.addEventListener('click', (event) => {
     const target = event.target;
     const link = target.dataset.link;
@@ -27,12 +22,16 @@ navbarMenu.addEventListener('click', (event) => {
     }
 
     scrollIntoView(link);
+
+    // menu button click state
+    clickMenu(items, link);
 });
 
 // when we click 'clickme' button, scrolling
 const contactBtn = document.querySelector('.home__contact');
 contactBtn.addEventListener('click', (event) => {
     scrollIntoView('#contact');
+    clickMenu(items, '#contact');
 });
 
 // home transparent
@@ -55,6 +54,7 @@ document.addEventListener('scroll', () => {
 // Click "Arrow up" Button, Scrolling
 arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
+    clickMenu(items, '#home');
 });
 
 // Project filtering
@@ -78,7 +78,21 @@ workCategories.addEventListener('click', (event) => {
         });
         workProject.classList.remove('anim-out');
     }, 300);
+
+    // click menu
+    const categoryBtns = document.querySelectorAll('.category__btn');
+    clickMenu(categoryBtns, filter);
 });
+
+function clickMenu(menus, selector) {
+    menus.forEach(menu => {
+        if(selector === menu.dataset.link || selector === menu.dataset.filter) {
+            menu.classList.add('active');
+        }else {
+            menu.classList.remove('active');
+        }
+    });
+}
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
