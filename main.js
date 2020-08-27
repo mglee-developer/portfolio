@@ -20,11 +20,20 @@ navbarMenu.addEventListener('click', (event) => {
     if(link == null) {
         return;
     }
-
+    // scroll
     scrollIntoView(link);
 
     // menu button click state
     clickMenu(items, link);
+
+    // toggle class remove
+    navbarMenu.classList.remove('open');
+});
+
+// toggle btn show
+const toggleBtn = document.querySelector('.navbar__toggle-btn');
+toggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 });
 
 // when we click 'clickme' button, scrolling

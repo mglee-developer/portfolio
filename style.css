@@ -2,7 +2,7 @@
 :root {
     /* Color */
     --color-white: #ffffff;
-    --color-dary-white: #f5f5f5;
+    --color-dark-white: #f5f5f5;
     --color-black: #333333;
     --color-dark-grey: #4d4d4d;
     --color-grey: #9e9e9e;
@@ -127,7 +127,7 @@ p {
 }
 .navbar__toggle-btn {
     position: absolute;
-    top: 38px;
+    top: 28px;
     right: 32px;
     font-size: 24px;
     display: none;
@@ -322,7 +322,7 @@ p {
     width: 280px;
     height: 250px;
     margin: 2px;
-    background-color: var(--color-dary-white);
+    background-color: var(--color-dark-white);
 }
 .project.invisible {
     display: none;
@@ -349,7 +349,9 @@ p {
     opacity: 0.8;
     transform: rotateY(0);
 }
-.project__description h3,
+.project__description h3 {
+    color: var(--color-yellow);
+}
 .project__description p {
     color: var(--color-white);
 }
@@ -411,11 +413,15 @@ p {
     #navbar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-light-blue);
     }
     .navbar__menu {
         width: 100%;
         text-align: center;
         display: none;
+    }
+    .navbar__menu.open {
+        display: block;
     }
     .navbar__menu ul {
         flex-direction: column;
