@@ -136,7 +136,7 @@ p {
 /* Home */
 #home {
     text-align: center;
-    background: center/cover no-repeat url('/imgs/background.png');
+    background: center/cover no-repeat url('./imgs/background.png');
     padding: 120px 40px 40px;
 }
 .home__profile {
